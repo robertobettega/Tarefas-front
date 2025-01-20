@@ -1,3 +1,25 @@
 <main>
-<h2>DJABO</h2>
+    <section class="form-section">
+       <h1>Tarefas</h1>
+       <ng-content></ng-content>
+       <div class="btn-wrapper">
+            <button 
+                class="btn-primary" 
+                (click)="submit()"
+                [disabled]="disablePrimaryBtn"
+            >
+                {{ primaryBtnText }}
+            </button>
+            <div class="divider">
+                <div></div>
+                <span>ou</span>
+                <div></div>
+            </div>
+            <button class="btn-secondary" (click)="navigate()">{{ secondaryBtnText }}</button>
+       </div>
+    </section>
+    <section class="main-section">
+        <img src="tarefas-imagem.png"/>
+        <h1>Suas tarefas simplificadas!</h1>
+    </section>
 </main>
