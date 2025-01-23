@@ -1,5 +1,5 @@
 export enum Situacao {
-    PENDENTE = 'PENDENTE',
+    EM_ANDAMENTO = 'EM_ANDAMENTO',
     CONCLUIDA = 'CONCLUIDA'
   }
   

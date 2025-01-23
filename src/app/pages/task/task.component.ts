@@ -4,12 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { Task } from '../../models/task.model';
 import { Situacao } from '../../models/situacao.enum';
 import { CommonModule } from '@angular/common';
+import { prioridade } from '../../models/prioridade.enum';
 
 
 @Component({
   selector: 'app-task',
   templateUrl: './task.component.html',
-  styleUrls: ['./task.component.css'],
+  styleUrls: ['./task.component.scss'],
   imports: [FormsModule, CommonModule]
 })
 export class TaskComponent implements OnInit {
@@ -26,6 +27,18 @@ export class TaskComponent implements OnInit {
   ngOnInit(): void {
     this.buscarTasks();
   }
+
+  criarNovaTask(): void {
+    this.task = new Task();
+    this.task.id = 0;
+    this.task.titulo = '';
+    this.task.descricao = '';
+    this.task.responsavel = '';
+    this.task.situacao = Situacao.EM_ANDAMENTO;
+    this.task.prioridade = prioridade.MEDIA;
+    this.task.dataConclusao = undefined; 
+  }
+  
 
   buscarTasks(): void {
     this.taskService.filtrarTasks(this.filtroTitulo, this.filtroResponsavel, this.filtroNumero, this.filtroSituacao)

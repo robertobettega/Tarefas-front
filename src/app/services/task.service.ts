@@ -7,12 +7,12 @@ import { Task } from '../models/task.model';
   providedIn: 'root'
 })
 export class TaskService {
-  private apiUrl = 'http://localhost:3000/tasks'; // URL da API
+  private apiUrl = 'http://localhost:8080/tarefas'; // URL da API
 
   constructor(private http: HttpClient) {}
 
   filtrarTasks(titulo: string, responsavel: string, numero: number | null, situacao: string): Observable<Task[]> {
-    // Adicionar parâmetros de filtro
+
     let params: any = { titulo, responsavel, numero, situacao };
     return this.http.get<Task[]>(this.apiUrl, { params });
   }
