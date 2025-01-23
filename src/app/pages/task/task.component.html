@@ -1,15 +1,20 @@
-<div class="container mt-4">
-  <h1 class="mb-4"><b>Lista de Tarefas</b></h1>
+<nav class="navbar border-bottom">
+<h1><b>Lista de Tarefas</b></h1>
+<img class="imagem" src="logo-esig-removebg-preview.png">
+</nav>
+<div class="container">
 
   <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#taskModal">Criar Tarefa</button>
 
-  <table class="table table-striped">
+  <div class="card">
+  <table class="table table-hover">
     <thead>
       <tr>
         <th>Id</th>
         <th>Título</th>
         <th>Responsável</th>
         <th>Situação</th>
+        <th>Prazo</th>
         <th>Ações</th>
       </tr>
     </thead>
@@ -19,14 +24,30 @@
         <td>{{ task.titulo }}</td>
         <td>{{ task.responsavel }}</td>
         <td>{{ task.situacao }}</td>
+        <td>{{ task.dataConclusao }}</td>
         <td>
-          <button class="btn btn-warning btn-sm me-2" (click)="editarTask(task.id)">Editar</button>
-          <button class="btn btn-danger btn-sm me-2" (click)="removerTask(task.id)">Remover</button>
-          <button class="btn btn-success btn-sm" (click)="concluirTask(task)">Concluir</button>
+          <button class="btn btn-warning btn-sm me-2" (click)="editarTask(task.id)"><i class="bi bi-pencil-square"></i></button>
+          <button class="btn btn-danger btn-sm me-2" (click)="removerTask(task.id)"><i class="bi bi-x"></i></button>
+          <button class="btn btn-success btn-sm" (click)="concluirTask(task)"><i class="bi bi-x"></i></button>
+        </td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>teste de tarefa</td>
+        <td>Roberto Bettega</td>
+        <td>Em andamento</td>
+        <td>31/01/2025</td>
+        <td>
+          <button class="btn btn-outline-warning btn-sm me-2" (click)="editarTask(task.id)"><i class="bi bi-pencil"></i></button>
+          <button class="btn btn-outline-danger btn-sm me-2" (click)="removerTask(task.id)"><i class="bi bi-x"></i></button>
+          <button class="btn btn-outline-success btn-sm" (click)="concluirTask(task)"><i class="bi bi-check"></i></button>
+          <button class="btn btn-outline-primary btn-sm" (click)="concluirTask(task)"><i class="bi bi-search"></i></button>
         </td>
       </tr>
     </tbody>
   </table>
+
+</div>
 
   <div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

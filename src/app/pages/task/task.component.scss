@@ -1,6 +1,23 @@
+@import "../../../styles/variables.scss";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+.card{
+  padding: 15px;
+}
+
+.navbar{
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #f4f4f4;
+}
+
+.imagem{
+  width: 150px;
+}
 .container {
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 1200px;
+
   
     h1 {
       text-align: center;
@@ -10,7 +27,7 @@
     .table {
       width: 100%;
       border-collapse: collapse;
-      text-align: left;
+      text-align: center;
   
       th, td {
         padding: 10px;
