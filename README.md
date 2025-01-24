@@ -24,6 +24,9 @@ Com essas ferramentas foi possível criar uma aplicação visualmente agrádáve
 
 ![image](https://github.com/user-attachments/assets/6e818cb4-ce55-4daa-bd5b-d948aae71402)
 
+![image](https://github.com/user-attachments/assets/74158981-2f17-4aef-a31f-e9201d365de4)
+
+
 ## Guia de execução dos projetos
 * Em uma pasta inicialize um repositório e clone os projetos
 ```bash
